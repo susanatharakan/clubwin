@@ -1,5 +1,6 @@
 package co.uk.mcb.clubwin;
 
+import co.uk.mcb.clubwin.config.BatchConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
