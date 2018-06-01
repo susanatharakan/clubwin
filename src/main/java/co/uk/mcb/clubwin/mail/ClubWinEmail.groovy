@@ -7,15 +7,14 @@ import org.springframework.stereotype.Service
 /**
  *
  */
-class ClubWinEMail {
+class ClubWinEmail {
     private ClubWin clubWin
 
     final String to
     final int templateId = ""
     final Map substitutions = [:]
 
-    ClubWinEMail(String clubWinUrl, String to) {
-
+    ClubWinEmail(String clubWinUrl, String to) {
         substitutions.put("CLUBWIN_URL", "http://myclubwin.co.uk/"+clubWinUrl);
     }
 

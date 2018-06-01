@@ -13,16 +13,16 @@ public class ClubWinService {
         this.clubWinRepo = clubWinRepo;
     }
 
-    void saveClubWin(ClubWin clubWin){
+    public void saveClubWin(ClubWin clubWin){
         clubWinRepo.save(clubWin);
     }
 
-    List<ClubWin> findAll(){
+    public List<ClubWin> findAll(){
        return clubWinRepo.findAll();
     }
 
 
-    List<ClubWin> findValidClubWin(){
+    public List<ClubWin> findValidClubWin(){
         return clubWinRepo.findValidWinClub();
     }
 
