@@ -8,13 +8,13 @@ import org.springframework.stereotype.Service
  *
  */
 class ClubWinEmail {
-    private ClubWin clubWin
 
     final String to
     final int templateId = ""
     final Map substitutions = [:]
 
-    ClubWinEmail(String clubWinUrl, String to) {
+    ClubWinEmail(String clubWinUrl, String toEmailAddress) {
+        this.to = toEmailAddress;
         substitutions.put("CLUBWIN_URL", "http://myclubwin.co.uk/"+clubWinUrl);
     }
 
