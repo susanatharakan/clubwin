@@ -1,24 +1,22 @@
 package co.uk.mcb.clubwin.mail
 
-import co.uk.mcb.cms.form.Club
-import hu.meruem.ServiceLocator
+import co.uk.mcb.clubwin.ServiceLocator
+import co.uk.mcb.clubwin.model.ClubWin
+import org.springframework.stereotype.Service
 
 /**
- * sendinblue 1199 -templateId , sents mail to Club contactEmail  when the club is activated
+ *
  */
 class ClubWinEMail {
-    private Club club
+    private ClubWin clubWin
 
     final String to
-    final int templateId = 1199
+    final int templateId = ""
     final Map substitutions = [:]
 
-    ClubWinEMail(Club club) {
-        this.club = club
-        to = club.contactEmail
+    ClubWinEMail(String clubWinUrl, String to) {
 
-        substitutions.put("FIRST_NAME", club.contactFirstName)
-        substitutions.put("BETTING_URL", club.desiredUrl)
+        substitutions.put("CLUBWIN_URL", "http://myclubwin.co.uk/"+clubWinUrl);
     }
 
     def send() {

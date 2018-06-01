@@ -35,4 +35,7 @@ public class ClubWin {
         this.winCode = winCode;
     }
 
+    public void setValid(Boolean valid) {
+        this.valid = valid;
+    }
 }
