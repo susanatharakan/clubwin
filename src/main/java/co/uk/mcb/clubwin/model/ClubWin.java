@@ -15,7 +15,6 @@ public class ClubWin {
     private Long id;
 
     private String winCode;
-    private Boolean valid = true;
 
     public ClubWin(){}
 
@@ -35,7 +34,4 @@ public class ClubWin {
         this.winCode = winCode;
     }
 
-    public void setValid(Boolean valid) {
-        this.valid = valid;
-    }
 }

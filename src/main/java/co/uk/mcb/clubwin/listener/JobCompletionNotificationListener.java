@@ -31,14 +31,14 @@ public class JobCompletionNotificationListener extends JobExecutionListenerSuppo
     public void afterJob(JobExecution jobExecution){
         if(jobExecution.getStatus() == BatchStatus.COMPLETED){
             log.info("JOB FINISHED");
-            processMail();
+           // processMail();
         }
     }
 
     /*
         Process Mails : iterate through the contact list and gets the valid codes and the mail is send voa the ClubWinEmail
     */
-    public void processMail(){
+   /* public void processMail(){
 
         // TO BE IMPLEMENTED : TO GET FROM CMS SERVICE
         List<String> clubContactEmails = new ArrayList<String>();
@@ -46,17 +46,17 @@ public class JobCompletionNotificationListener extends JobExecutionListenerSuppo
         ClubWin validClubWin;
        for(int i = 0 ; i< clubContactEmails.size(); i++){
            validClubWin = validClubWins.get(i);
-           new ClubWinEmail(validClubWin.getWinCode(),clubContactEmails.get(i)).send();
+           new ClubWinEmail(validClubWin.getCode(),clubContactEmails.get(i)).send();
            setWinInValid(validClubWin);
        }
-    }
+    }*/
 
     /*
     Sets win codes in valid once the mail is sent
      */
-    private void setWinInValid(ClubWin clubWin){
+  /*  private void setWinInValid(ClubWin clubWin){
         clubWin.setValid(false);
         clubWinService.saveClubWin(clubWin);
-    }
+    }*/
 
 }

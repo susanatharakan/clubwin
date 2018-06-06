@@ -3,7 +3,7 @@ package co.uk.mcb.clubwin;
 import co.uk.mcb.clubwin.model.ClubWin;
 import org.springframework.batch.item.ItemProcessor;
 
-public class ClubWinItemProcessor implements ItemProcessor<ClubWin, ClubWin> {
+public class  ClubWinItemProcessor implements ItemProcessor<ClubWin, ClubWin> {
 
 
     @Override
